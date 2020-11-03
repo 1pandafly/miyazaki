@@ -1,0 +1,163 @@
+.main__slider {
+
+}
+
+.slider__wrapper {
+  //position: relative;
+  margin-bottom: 40px;
+}
+
+.slider__item {
+  width: fit-content;
+  margin: 0 10px;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    //object-fit: cover;
+  }
+
+  &:after {
+    position: absolute;
+    content: '';
+    width: 1000px;
+    height: 1000px;
+    opacity: .76;
+    background-color: #b67929;
+    transform: rotate(60deg);
+    left: -500px;
+    top: 0;
+  }
+}
+
+
+.slick-arrow {
+  position: absolute;
+  width: 200px;
+  height: 100%;
+  top: 0;
+  border: none;
+  z-index: 1;
+  cursor: pointer;
+
+  svg {
+    top: calc(50% - 18px);
+    position: absolute;
+  }
+}
+
+.slick-prev {
+  left: 0;
+  background: linear-gradient(to right, #fff 0, rgba(255, 255, 255, .75) 25%, rgba(255, 255, 255, .5) 50%, rgba(255, 255, 255, .25) 75%, transparent 100%);
+
+  svg {
+    left: 0;
+  }
+}
+
+.slick-next {
+  right: 0;
+  background: linear-gradient(to left, #fff 0, rgba(255, 255, 255, .75) 25%, rgba(255, 255, 255, .5) 50%, rgba(255, 255, 255, .25) 75%, transparent 100%);
+
+
+  svg {
+    right: 0;
+  }
+}
+
+.slick-dots {
+  position: absolute;
+  width: 100%;
+  bottom: -40px;
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  list-style: none;
+
+  li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ccc;
+    margin: 0 5px;
+  }
+
+  button {
+    padding: 0;
+    color: transparent;
+    border: none;
+    background: transparent;
+  }
+
+  .slick-active {
+    background: $header-background-color;
+  }
+}
+
+.slider__item-info {
+  max-width: calc(100% - 30px);
+  position: absolute;
+  left: 25px;
+  bottom: 15px;
+  z-index: 2;
+
+  h2 {
+    font-size: 32px;
+    line-height: 45px;
+    color: $font-color-light;
+    font-weight: normal;
+    margin-bottom: 15px;
+  }
+
+  a {
+
+  }
+}
+
+@media (max-width: 991px) {
+  .slick-arrow {
+    width: 100px;
+  }
+
+  .slider__item-info {
+    left: 15px;
+
+    h2 {
+      font-size: 25px;
+      line-height: 38px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .slider__item {
+    &:after {
+      left: -550px;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .slick-arrow {
+    width: 50px;
+  }
+
+  .slider__item {
+    &:after {
+      left: -700px;
+    }
+  }
+
+  .slider__item-info {
+    h2 {
+      margin-bottom: 5px;
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    a {
+
+    }
+  }
+}

@@ -1,0 +1,28 @@
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: $main-font;
+  //color: $font-color-dark;
+}
+
+body {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.position-fixed {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}
+
+.display-block {
+  display: block!important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

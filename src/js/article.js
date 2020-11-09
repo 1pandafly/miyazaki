@@ -1,8 +1,30 @@
 $(document).ready(function () {
-    articleParagraph();
+    const contentList = $('.content__list');
+    const galleryView = $('#galleryView');
+    const listView = $('#listView');
+
+
+    if(!contentList.hasClass('content__gallery-view')) {
+        articleParagraph();
+    }
+
+    galleryView.click(function () {
+        $(this).addClass('view__button-active');
+        listView.removeClass('view__button-active');
+        contentList.addClass('content__gallery-view');
+    });
+
+    listView.click(function () {
+        $(this).addClass('view__button-active');
+        galleryView.removeClass('view__button-active');
+        contentList.removeClass('content__gallery-view');
+    });
+
 
     $(window).resize(function () {
-        articleParagraph();
+        if(!contentList.hasClass('content__gallery-view')) {
+            articleParagraph();
+        }
     });
 });
 

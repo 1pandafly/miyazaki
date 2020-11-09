@@ -21,6 +21,14 @@ const html = () => {
 
 exports.html = html;
 
+const php = () => {
+    return gulp.src('src/*.php')
+        .pipe(gulp.dest('build'))
+        .pipe(browserSync.stream());
+};
+
+exports.php = php;
+
 
 const styles = () => {
     return gulp.src('./src/scss/*.scss')
@@ -93,6 +101,7 @@ const watch = () => {
         notify: false
     });
     gulp.watch('src/*.html', gulp.series(html));
+    gulp.watch('src/*.php', gulp.series(php));
     gulp.watch('src/scss/**/*.scss', gulp.series(styles));
     gulp.watch('src/js/**/*.js', gulp.series(scripts));
     gulp.watch([
@@ -106,6 +115,7 @@ exports.watch = watch;
 exports.default = gulp.series(
     gulp.parallel(
         html,
+        php,
         styles,
         scripts,
         copy,

@@ -7,10 +7,175 @@
 
 .filter__movies {
   width: 400px;
-  height: 40px;
+  //height: 40px;
   border: 3px solid $font-color-dark;
+  //display: flex;
+  //align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.filter__svg-rotate {
+  transform: rotate(180deg);
+}
+
+.filter__movies-heading {
+  height: 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 17px;
+  font-weight: bold;
+  color: $font-color-dark;
+}
+
+.filter__wrapper {
+  padding-top: 20px;
+  display: none;
+}
+
+.filter__rating {
+  margin-right: 30px;
+  flex-shrink: 0;
+
+  label {
+    font-size: 17px;
+    color: $font-color-dark;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+    cursor: pointer;
+  }
+}
+
+.filter__year {
+  width: 100%;
+  flex-grow: 1;
+}
+
+.filter__year-row {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  margin-bottom: 10px;
+
+  div {
+    width: 45px;
+    height: 100%;
+    font-size: 11px;
+    color: $font-color-dark;
+    flex-shrink: 0;
+    border: solid 1px $font-color-dark;
+    border-right: 0;
+    padding: 8px 0 9px 8px;
+  }
+
+  input {
+    width: 100%;
+    height: 100%;
+    border: solid 1px $font-color-dark;
+  }
+}
+
+.filter__heading {
+  font-size: 17px;
+  font-weight: bold;
+  color: $font-color-dark;
+  margin-bottom: 15px;
 }
 
 .filter__view {
+  width: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
 
+.view__button {
+  height: fit-content;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    width: 80px;
+    height: 15px;
+    padding: 2px 10px;
+    font-size: 13px;
+    text-align: center;
+    border: solid 2px $font-color-dark;
+    top: -24px;
+    right: -10px;
+  }
+
+  &:hover {
+    .view__button-hover {
+      display: block;
+    }
+  }
+}
+
+.view__button-hover {
+  position: absolute;
+  width: 100px;
+  //height: 15px;
+  padding: 2px 10px;
+  font-size: 13px;
+  text-align: center;
+  border: solid 2px $font-color-dark;
+  top: -24px;
+  right: -10px;
+  display: none;
+
+  &:before {
+    position: absolute;
+    content: '';
+    border: 5px solid transparent;
+    border-top: 5px solid $font-color-dark;
+    right: 15px;
+    bottom: -10px;
+  }
+}
+
+.view__svg {
+  fill: $font-color-dark;
+}
+
+.view__button-active {
+  svg {
+    fill: #b67929;
+  }
+}
+
+@media (max-width: 1023px) {
+  .main__filters {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .view__button-hover {
+    display: none!important;
+  }
+}
+
+@media (max-width: 575px) {
+  .main__filters {
+    padding-bottom: 15px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .filter__movies {
+    width: 100%;
+  }
+
+  .filter__view {
+    margin-top: 20px;
+  }
 }

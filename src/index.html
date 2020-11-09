@@ -35,9 +35,9 @@
         <div class="slider__wrapper">
             <div class="slider__item">
                 <img
-                    src="assets/images/slider1.jpg"
-                    srcset="assets/images/slider1@2x.jpg 2x"
-                    alt="slider1">
+                        src="assets/images/slider1.jpg"
+                        srcset="assets/images/slider1@2x.jpg 2x"
+                        alt="slider1">
                 <div class="slider__item-info">
                     <h2>15 best <br> <strong>Miyazaki Films Of All Time</strong></h2>
                     <a href="#" class="main__button">Read more</a>
@@ -88,10 +88,55 @@
 
     <section class="main__filters">
         <div class="filter__movies">
-
+            <div class="filter__movies-heading">
+                <p>Filter Movies</p>
+                <svg class="filter__svg" width="10" height="10">
+                    <use href="assets/images/sprite.svg#filter-triangle"></use>
+                </svg>
+            </div>
+            <div class="filter__wrapper">
+                <div class="filter__rating">
+                    <p class="filter__heading">Rating</p>
+                    <input type="radio" id="top5" name="top" value="5">
+                    <label for="top5">Show TOP 5</label><br>
+                    <input type="radio" id="top10" name="top" value="10">
+                    <label for="top10">Show TOP 10</label><br>
+                    <input type="radio" id="top15" name="top" value="15">
+                    <label for="top15">Show TOP 15</label><br>
+                    <input type="radio" id="topall" name="top" value="0" checked>
+                    <label for="topall">Show ALL</label>
+                </div>
+                <div class="filter__year">
+                    <p class="filter__heading">Year</p>
+                    <div class="filter__year-row">
+                        <div>From</div>
+                        <input id="fromYear" type="number" min="1970" max="2050">
+                    </div>
+                    <div class="filter__year-row">
+                        <div>To</div>
+                        <input id="toYear" type="number" min="1970" max="2050">
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="filter__view">
+            <button class="view__button" id="galleryView">
+                <svg class="view__svg" width="20" height="20">
+                    <use href="assets/images/sprite.svg#gallery-view"></use>
+                </svg>
+                <div class="view__button-hover">
+                    <p>Gallery View</p>
+                </div>
+            </button>
 
+            <button class="view__button view__button-active" id="listView">
+                <svg class="view__svg" width="20" height="20">
+                    <use href="assets/images/sprite.svg#list-view"></use>
+                </svg>
+                <div class="view__button-hover">
+                    <p>List View</p>
+                </div>
+            </button>
         </div>
     </section>
 
@@ -127,9 +172,9 @@
                 <div class="article__image">
                     <a href="#">
                         <img
-                            src="assets/images/the-wind-rises.jpg"
-                            srcset="assets/images/the-wind-rises@2x.jpg 2x"
-                            alt="The Wind Rises">
+                                src="assets/images/the-wind-rises.jpg"
+                                srcset="assets/images/the-wind-rises@2x.jpg 2x"
+                                alt="The Wind Rises">
                     </a>
                 </div>
                 <div class="article__info">
@@ -137,8 +182,8 @@
                         <a href="#">
                             <h2 class="article__title">The Wind Rises</h2>
                         </a>
-                        <p class="article__subtitle">year: 2013</p>
-                        <p class="article__subtitle">rating: 2/15</p>
+                        <p class="article__subtitle">year: <span class="year">2013</span></p>
+                        <p class="article__subtitle">rating: <span class="rating">12</span>/15</p>
                     </div>
                     <div class="article__description">
                         <p class="article__summary">Summary</p>
@@ -157,9 +202,9 @@
                 <div class="article__image">
                     <a href="#">
                         <img
-                            src="assets/images/howls-moving-castle.jpg"
-                            srcset="assets/images/howls-moving-castle@2x.jpg 2x"
-                            alt="Howl's Moving Castle">
+                                src="assets/images/howls-moving-castle.jpg"
+                                srcset="assets/images/howls-moving-castle@2x.jpg 2x"
+                                alt="Howl's Moving Castle">
                     </a>
                 </div>
                 <div class="article__info">
@@ -167,8 +212,8 @@
                         <a href="#">
                             <h2 class="article__title">Howl's Moving Castle</h2>
                         </a>
-                        <p class="article__subtitle">year: 2004</p>
-                        <p class="article__subtitle">rating: 3/15</p>
+                        <p class="article__subtitle">year: <span class="year">2004</span></p>
+                        <p class="article__subtitle">rating: <span class="rating">8</span>/15</p>
                     </div>
                     <div class="article__description">
                         <p class="article__summary">Summary</p>
@@ -186,9 +231,9 @@
                 <div class="article__image">
                     <a href="#">
                         <img
-                            src="assets/images/ponyo.jpg"
-                            srcset="assets/images/ponyo@2x.jpg 2x"
-                            alt="Ponyo">
+                                src="assets/images/ponyo.jpg"
+                                srcset="assets/images/ponyo@2x.jpg 2x"
+                                alt="Ponyo">
                     </a>
                 </div>
                 <div class="article__info">
@@ -196,8 +241,8 @@
                         <a href="#">
                             <h2 class="article__title">Ponyo</h2>
                         </a>
-                        <p class="article__subtitle">year: 2008</p>
-                        <p class="article__subtitle">rating: 4/15</p>
+                        <p class="article__subtitle">year: <span class="year">2008</span></p>
+                        <p class="article__subtitle">rating: <span class="rating">4</span>/15</p>
                     </div>
                     <div class="article__description">
                         <p class="article__summary">Summary</p>
@@ -245,9 +290,9 @@
         <div class="chat__header">
             <div class="chat__photo">
                 <img
-                    src="assets/images/chat-photo.png"
-                    srcset="assets/images/chat-photo@2x.png 2x"
-                    alt="Chat photo">
+                        src="assets/images/chat-photo.png"
+                        srcset="assets/images/chat-photo@2x.png 2x"
+                        alt="Chat photo">
             </div>
             <p>Hi, I`m Hayao Miyazaki! Feel free to ask any questions!</p>
         </div>

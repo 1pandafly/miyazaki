@@ -17,10 +17,6 @@
 
   .article__image {
     width: 100%;
-
-    img {
-      //height: auto;
-    }
   }
 
   .article__title {
@@ -29,7 +25,6 @@
   }
 
   .article__info {
-    //display: none;
     position: absolute;
     top: calc(100% - 125px);
     left: 15px;

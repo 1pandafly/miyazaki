@@ -7,10 +7,7 @@
 
 .filter__movies {
   width: 400px;
-  //height: 40px;
   border: 3px solid $font-color-dark;
-  //display: flex;
-  //align-items: center;
   padding-left: 15px;
   padding-right: 15px;
   cursor: pointer;
@@ -124,7 +121,6 @@
 .view__button-hover {
   position: absolute;
   width: 100px;
-  //height: 15px;
   padding: 2px 10px;
   font-size: 13px;
   text-align: center;
